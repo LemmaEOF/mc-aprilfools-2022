@@ -9,7 +9,7 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
-version = project.mod_version
+version = "${project.mod_version}+${project.minecraft_version}"
 group = project.maven_group
 
 repositories {
@@ -50,10 +50,12 @@ dependencies {
 
 	modImplementation "org.quiltmc:quilt-loader:${project.loader_version}"
 
-	//let's find out whether this is based on 22w13a or 1.18.2!
 	modImplementation("org.quiltmc.qsl:qsl:${qsl_version}+1.18.2-SNAPSHOT") {
 		exclude group: "net.fabricmc"
 	}
+
+	include("org.quiltmc.qsl.core:qsl_base:1.0.0+1.18.2-SNAPSHOT")
+	include("org.quiltmc.qsl.block:block-extensions:1.0.0+1.18.2-SNAPSHOT")
 
 	modImplementation include("org.quiltmc.fabric_api_qsl:fabric-registry-sync-v0:0.9.8+1.18.2-SNAPSHOT")
 }

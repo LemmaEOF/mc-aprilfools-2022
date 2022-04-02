@@ -1,12 +1,18 @@
-# Quilt Example Mod
-Forked from Fabric Example Mod to use Quilt tools
+<img src="icon.png" align="right" width="180px"/>
 
-**Note: This is unofficial and you're not likely to get support for this.**
+# One Block At A Time
 
-## Setup
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+[>> Downloads <<](https://github.com/LemmaEOF/mc-aprilfools-2022/releases)
 
-## License
+*Ready for shipping!*
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+**This mod is open source and under a permissive license.** As such, it can be included in any modpack on any platform without prior permission. We appreciate hearing about people using our mods, but you do not need to ask to use them. See the [LICENSE file](LICENSE) for more details.
+
+One Box At A Time is a Quilt mod *exclusively* for Minecraft snapshot 22w13oneblockatatime, the april fools snapshot for 2022.
+It adds cardboard boxes which can store up to nine blocks. To fill the box, place blocks above it and then right-click it with empty arms.
+The box is crafted with four planks and one stick.
+
+The mod also adds support for pressing the drop key to throw blocks or entities from any distance! Have fun!
+
+NOTE: I've attempted to make this mod also support Fabric API. **It may not work, and will not be supported if it doesn't**.

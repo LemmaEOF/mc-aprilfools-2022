@@ -15,8 +15,8 @@
       "sources": "https://github.com/lemmaeof/mc-aprilfools-2022"
     },
 
-    "license": "CC0-1.0",
-    "icon": "assets/oneoxatatime/icon.png",
+    "license": "FAFOL 0.2",
+    "icon": "assets/oneboxatatime/icon.png",
 
     "environment": "*",
     "entrypoints": {

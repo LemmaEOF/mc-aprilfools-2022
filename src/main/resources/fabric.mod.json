@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "oneboxatatime",
+  "version": "${version}",
+
+  "name": "One Box At A Time",
+  "description": "Messing around with the One Block At A Time april fools snapshot!",
+  "authors": [
+    "LemmaEOF"
+  ],
+  "contact": {
+    "homepage": "https://lemmaeof.gay/",
+    "sources": "https://github.com/lemmaeof/mc-aprilfools-2022"
+  },
+
+  "license": "FAFOL 0.2",
+  "icon": "assets/oneboxatatime/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "init": [
+      "gay.lemmaeof.obaat.OneBoxAtATime"
+    ]
+  },
+  "depends": {
+    "quilt_base": "*"
+  },
+  "mixins": [
+    "obaat.mixins.json"
+  ],
+  "accessWidener": "obaat.accesswidener"
+}
