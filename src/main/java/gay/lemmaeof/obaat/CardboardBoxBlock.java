@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -27,13 +28,29 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CardboardBoxBlock extends Block implements EntityBlock {
 	public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
+	public static final VoxelShape OPEN_SHAPE = Shapes.or(
+			Block.box(0, 0, 0, 16, 1, 16),
+			Block.box(0, 0, 0, 16, 16, 1),
+			Block.box(0, 0, 0, 1, 16, 16),
+			Block.box(15, 0, 0, 16, 16, 16),
+			Block.box(0, 0, 15, 16, 16, 16)
+	);
+
 	public CardboardBoxBlock(Properties properties) {
 		super(properties);
 		this.registerDefaultState(this.stateDefinition.any().setValue(OPEN, true));
+	}
+
+	@Override
+	public VoxelShape getCollisionShape(BlockState state, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+		return state.getValue(OPEN)? OPEN_SHAPE : Shapes.block();
 	}
 
 	@Override
@@ -52,7 +69,10 @@ public class CardboardBoxBlock extends Block implements EntityBlock {
 					List<BlockPos> toBreak = new ArrayList<>();
 					for (int i = 0; i < 9; i++) {
 						BlockState grabState = level.getBlockState(mutable.move(Direction.UP));
-						if (grabState.isAir()) continue;
+						if (grabState.isAir()){
+							box.getInv().setItem(i, ItemStack.EMPTY);
+							continue;
+						}
 						Item item;
 						if (grabState.getBlock() instanceof GenericItemBlock) {
 							item = GenericItemBlock.itemFromGenericBlock(grabState);
