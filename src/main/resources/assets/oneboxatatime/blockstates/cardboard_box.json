@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "open=true": { "model": "oneboxatatime:block/cardboard_box_open" },
+    "open=false": { "model": "oneboxatatime:block/cardboard_box_closed" }
+  }
+}

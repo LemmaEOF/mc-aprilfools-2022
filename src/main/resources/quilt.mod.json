@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
   "quilt_loader": {
-    "group": "quilt-example-mod",
-    "id": "modid",
+    "group": "gay.lemmaeof",
+    "id": "oneboxatatime",
     "version": "${version}",
 
-    "name": "Example Mod",
-    "description": "This is an example description! Tell everyone what your mod is about!",
+    "name": "One Box At A Time",
+    "description": "Messing around with the One Block At A Time april fools snapshot!",
     "authors": [
-      "Me!"
+      "LemmaEOF"
     ],
     "contact": {
-      "homepage": "https://quiltmc.org/",
-      "sources": "https://github.com/Oliver-makes-code/quilt-example-mod"
+      "homepage": "https://lemmaeof.gay/",
+      "sources": "https://github.com/lemmaeof/mc-aprilfools-2022"
     },
 
     "license": "CC0-1.0",
-    "icon": "assets/modid/icon.png",
+    "icon": "assets/oneoxatatime/icon.png",
 
     "environment": "*",
     "entrypoints": {
       "init": [
-        "org.quiltmc.example.ExampleMod"
+        "gay.lemmaeof.obaat.OneBoxAtATime"
       ]
     },
     "depends": [
@@ -34,16 +34,15 @@
         "version": "*"
       },
       {
-        "id": "minecraft",
-        "version": "1.18.2"
-      },
-      {
         "id": "java",
         "version": ">=17"
       }
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
+  "mixin": [
+    "obaat.mixins.json"
+  ],
+  "access_widener": [
+    "obaat.accesswidener"
   ]
 }

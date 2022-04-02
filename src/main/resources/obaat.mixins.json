@@ -1,12 +1,15 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.quiltmc.example.mixin",
+  "package": "gay.lemmaeof.obaat.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MixinPlayer",
+    "MixinServerPlayer",
+    "MixinServerPlayerGameMode"
   ],
   "client": [
-    "ExampleMixin"
+    "MixinMinecraft"
   ],
   "injectors": {
     "defaultRequire": 1
