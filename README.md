@@ -1,6 +1,6 @@
 <img src="icon.png" align="right" width="180px"/>
 
-# One Block At A Time
+# One Box At A Time
 
 
 [>> Downloads <<](https://github.com/LemmaEOF/mc-aprilfools-2022/releases)
