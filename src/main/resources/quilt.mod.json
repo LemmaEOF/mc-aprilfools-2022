@@ -42,7 +42,5 @@
   "mixin": [
     "obaat.mixins.json"
   ],
-  "access_widener": [
-    "obaat.accesswidener"
-  ]
+  "access_widener": "obaat.accesswidener"
 }

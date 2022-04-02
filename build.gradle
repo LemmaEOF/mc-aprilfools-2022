@@ -55,7 +55,7 @@ dependencies {
 	}
 
 	include("org.quiltmc.qsl.core:qsl_base:1.0.0+1.18.2-SNAPSHOT")
-	include("org.quiltmc.qsl.block:block-extensions:1.0.0+1.18.2-SNAPSHOT")
+	include("org.quiltmc.qsl.block:block_extensions:1.0.0+1.18.2-SNAPSHOT")
 
 	modImplementation include("org.quiltmc.fabric_api_qsl:fabric-registry-sync-v0:0.9.8+1.18.2-SNAPSHOT")
 }

@@ -15,4 +15,5 @@ The box is crafted with four planks and one stick.
 
 The mod also adds support for pressing the drop key to throw blocks or entities from any distance! Have fun!
 
-NOTE: I've attempted to make this mod also support Fabric API. **It may not work, and will not be supported if it doesn't**.
+NOTE: I've included a fabric.mod.json in the root if you would like to try and run it on Fabric.
+**This may not work, and will not be supported.**
